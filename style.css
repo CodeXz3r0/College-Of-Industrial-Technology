@@ -1,0 +1,207 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body 
+  {font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #0a192f, #0f4c5c, #1b998b);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.3s, color 0.3s;}
+
+/* Sidebar + Menu Button */
+#menu-btn 
+  {position: fixed;
+  top: 0.9375rem;
+  left: 0.9375rem;
+  background: #1b998b;
+  border: none;
+  padding: 0.625rem 0.9375rem;
+  color: white;
+  font-size: 1.125rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  z-index: 1001;}
+
+.sidebar 
+  {position: fixed;
+  top: 0;
+  left: -16.875rem;
+  width: 16.875rem;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.97);
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.75rem;
+  transition: left 0.3s ease;
+  z-index: 1000;}
+
+.sidebar a 
+  {color: white;
+  padding: 0.9375rem 1.25rem;
+  text-decoration: none;
+  font-size: 1.125rem;}
+
+.sidebar a:hover { background: #1b998b; }
+.sidebar.active { left: 0; }
+
+/* Verse inside Sidebar */
+.verse 
+  {margin: 1.25rem;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #a7ffeb;}
+  
+.verse span 
+  {display: block;
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  color: #80deea;}
+
+/* Mode Toggle Button */
+#mode-toggle 
+  {margin: 1.25rem;
+  padding: 0.625rem;
+  width: calc(100% - 2.5rem);
+  border: none;
+  border-radius: 0.3125rem;
+  background: #1b998b;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;}
+  
+#mode-toggle:hover { background: #148f77; }
+
+/* Hero */
+.hero 
+  {text-align: center;
+  padding: 6.25rem 1.25rem 2.5rem;
+  background: rgba(0,0,0,0.4);}
+
+.hero h1 
+  {font-size: 2.5em;
+  margin-bottom: 0.625rem;
+  color: #e0f7fa;}
+  
+.hero p 
+{font-size: 1.2em;
+  color: #b2dfdb;}
+
+/* Conveyor Images */
+.conveyor 
+  {width: 100%;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3);
+  padding: 1.25rem 0;}
+  
+  
+
+.conveyor-track 
+  {display: flex;
+  animation: move 8s linear infinite; }
+  /* conveyor keeps looping */
+  
+
+.conveyor img 
+  {width: 13.75rem; 
+  height: 9.375rem;
+  margin: 0 0.625rem;
+  border-radius: 0.5rem;
+  flex-shrink: 0;}
+  
+  
+
+@keyframes 
+  move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }}
+  
+  
+
+/* Reasons */
+.reasons 
+  {width: 80%;
+  margin: 1.875rem auto 0.625rem auto;
+  background: rgba(27, 153, 139, 0.9);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.4);}
+  
+  
+.reasons h2 
+  {text-align: center;
+  margin-bottom: 0.9375rem;
+  font-size: 1.8em;
+  color: #a7ffeb;}
+  
+  
+.reasons ul { list-style: none;}
+
+.reasons li 
+  {margin: 0.5rem 0;
+  font-size: 1.1em;
+  padding-left: 1.25rem;
+  position: relative;}
+  
+.reasons li::before 
+  {content: "✔";
+  position: absolute;
+  left: 0;
+  color: #e0f7fa;}
+
+/* Quotes */
+.quote-box 
+  {text-align: center;
+  background: rgba(0,0,0,0.7);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  margin: 1.25rem auto;
+  width: 80%;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.4);}
+  
+  
+#quote 
+  {font-size: 1.3em;
+  margin-bottom: 0.625rem;
+  color: #e0f7fa;}
+
+#credit { font-size: 1em; color: #80deea; }
+
+
+
+/* Light Mode (Darker Tone) */
+.light-mode {
+  background: linear-gradient(135deg, #cfd8dc, #90a4ae, #80cbc4);
+  color: #222;}
+  
+.light-mode .hero { background: rgba(255, 255, 255, 0.2); }
+
+.light-mode .hero h1 { color: #004d40; }
+
+.light-mode .hero p { color: #00695c; }
+
+.light-mode .reasons { background: rgba(0, 77, 64, 0.2); }
+
+.light-mode .reasons h2 { color: #004d40; }
+
+.light-mode .reasons li { color: #222; }
+
+.light-mode .reasons li::before { color: #00695c; }
+
+.light-mode .quote-box { background: rgba(120, 144, 156, 0.6); }
+
+.light-mode #quote { color: #004d40; }
+
+.light-mode #credit { color: #00695c; }
+
+.light-mode .verse { color: #004d40; }
+
+.light-mode .verse span { color: #00332c; }
+
+.light-mode #menu-btn { background: #00695c; color: white; }
+
+.light-mode #menu-btn:hover { background: #004d40; }
+
+.light-mode #mode-toggle { background: #00695c; }
+
+.light-mode #mode-toggle:hover { background: #004d40; }
