@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>College of Industrial Technology</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIT Showcase</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <!-- Header -->
-  <header>
+  <!-- Sidebar Menu -->
+  <button id="menu-btn">☰ Menu</button>
+  <nav id="sidebar" class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">About CIT</a>
+    <a href="#">Programs</a>
+    <a href="#">Contact</a>
+
+    <!-- Bible Verse -->
+    <div class="verse">
+      <p>"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</p>
+      <span>– Colossians 3:23</span>
+    </div>
+
+    <!-- Dark / Light Mode -->
+    <button id="mode-toggle">Light Mode</button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
     <h1>College of Industrial Technology</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Programs</a></li>
-        <li><a href="#">Heirarchy</a></li>
-        
-        <!-- Light/Dark Mode button inside nav -->
-        <li><button id="toggleMode" class="small-btn">Dark Mode</button></li>
-      </ul>
-    </nav>
+    <p>Where skills meet opportunity, and education builds the future.</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Welcome to CIT</h2>
-    <p>Empowering students with knowledge and skills for the future.</p>
+  <!-- Image Conveyor -->
+  <section class="conveyor">
+    <div class="conveyor-track">
+      <img src="I1.jpg" alt="CIT Image 1">
+      <img src="I2.jpg" alt="CIT Image 2">
+      <img src="I3.jpg" alt="CIT Image 3">
+      <img src="I4.jpg" alt="CIT Image 4">
+      <img src="I1.jpg" alt="CIT Image 1">
+      <img src="I2.jpg" alt="CIT Image 2">
+      <img src="I3.jpg" alt="CIT Image 3">
+      <img src="I4.jpg" alt="CIT Image 4">
+    </div>
+  </section>
 
+  <!-- Why Choose CIT -->
+  <section class="reasons">
+    <h2>Why Choose CIT?</h2>
+    <ul>
+      <li>Industry-aligned programs for high employability.</li>
+      <li>Modern labs and hands-on training.</li>
+      <li>Strong partnerships with leading companies.</li>
+      <li>Affordable education with maximum career impact.</li>
+      <li>Supportive environment with expert faculty.</li>
+    </ul>
+  </section>
 
-  <button id="learnMoreBtn">Learn More</button>
-  <!-- Popup -->
-  <div id="customPopup" class="popup">
-    <span id="closePopup">&times;</span>
-    <p>
-      Welcome to the College of Industrial Technology! Explore our programs and opportunities.
-    </p>
-  </div>
+  <!-- Quotes -->
+  <section class="quote-box">
+    <p id="quote"></p>
+    <span id="credit"></span>
+  </section>
 
-  <!-- External CSS + JS -->
   <script src="script.js"></script>
 </body>
 </html>
